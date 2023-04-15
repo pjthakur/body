@@ -1,13 +1,45 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { BsInstagram,BsFacebook,BsTwitter } from "react-icons/bs";
-import navimage from '../assets/download.png'
+import navimage from '../assets/bodylab1.png'
+import navimage2 from '../assets/bodylab2.png'
+import { AiOutlineUser } from "react-icons/ai";
+import { Component, useRef } from 'react';
+
+const ImageToggleOnMouseOver = ({primaryImg, secondaryImg}) => {
+  const imageRef = useRef(null);
+
+  return (
+    <img style={{transition:'0.3s'}}
+      onMouseOver={() => {
+        imageRef.current.src = secondaryImg;
+      }}
+      onMouseOut={() => {
+        imageRef.current.src= primaryImg;
+      }}
+      src={primaryImg} 
+      alt=""
+      ref={imageRef}
+    />
+  )
+}
+const ImageChangeOnMouseOver = () => {
+  return (
+    <div  style={{transition:'0.3s'}}>
+      <ImageToggleOnMouseOver
+        primaryImg={navimage2}
+        secondaryImg={navimage}
+        alt="" />
+    </div>
+  )
+}
 
 const Navbar =()=> {
+  const imageRef = useRef(null);
   return (
-    <div className='navbar' style={{paddingTop:"0"}}>
+    <div className='navbar' style={{paddingTop:"0", backgroundColor:'#131313'}}>
         <div className='nav-logo '>
-            <img src={navimage} alt='gym-logo'/>
+            <ImageChangeOnMouseOver className='nav-image' style={{transition:'0.3s'}}/>
         </div>
         <div className='nav-content'>
             <ul>
@@ -23,7 +55,7 @@ const Navbar =()=> {
             <ul>
                 <li><a href='#facebook'><BsFacebook/></a></li>
                 <li><a href='#insta'><BsInstagram/></a></li>
-                <li><a href='#twitter'><BsTwitter/></a></li>
+                <li><Link to='/Login'><AiOutlineUser/></Link></li>
             </ul>
         </div>
     </div>

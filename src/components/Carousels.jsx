@@ -23,52 +23,52 @@ const Carousels = () => {
         {
           image: image1,
           alt: "Image 1",
-          heading: "ANAEMIA PREVALENCE",
-          caption :"All Districs Affected"
+          heading: "Body Lab",
+          caption :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         },
         {
           image: image2,
           alt: "Image 2",
-          heading: "ANAEMIA PREVALENCE",
-          caption :"All Districs Affected"
+          heading: "Body Lab",
+          caption :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         },
         {
           image:image3,
           alt: "Image 3",
-          heading: "ANAEMIA PREVALENCE",
-          caption :"All Districs Affected"
+          heading: "Body Lab",
+          caption :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           
         },
         {
           image: navimage,
           alt: "Image 4",
-          heading: "ANAEMIA PREVALENCE",
-          caption : "All at Risks to Anemia"
+          heading: "Body Lab",
+          caption : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           
         },
         {
           image: navimage,
           alt: "Image 5",
-          heading: "ANAEMIA PREVALENCE",
-          caption :"514 districts Anemia ≥ 40% among children 6-59 months",
+          heading: "Body Lab",
+          caption :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           
         },
         {
           image: navimage,
           alt: "Image 6",
-          heading: "ANAEMIA PREVALENCE",
-          caption : "139 districts Anemia ≥ 40% among women of reproductive age"
+          heading: "Body Lab",
+          caption : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           
         },
         {
           image: navimage,
           alt: "Image 7",
-          heading: "ANAEMIA PREVALENCE",
-          caption : "65 districtsAnemia ≥ 40% among pregnant women 15-49 years"
+          heading: "Body Lab",
+          caption : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         },
       ];
   return (
-    <Carousel fade>
+    <Carousel fade indicators={false}>
       {items.map((item, index) => (
         <Carousel.Item key={index}>
           <img className="d-block w-100" src={item.image} alt={item.alt} />
