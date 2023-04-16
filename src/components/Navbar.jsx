@@ -10,7 +10,7 @@ const ImageToggleOnMouseOver = ({primaryImg, secondaryImg}) => {
   const imageRef = useRef(null);
 
   return (
-    <img style={{transition:'0.3s'}}
+    <img 
       onMouseOver={() => {
         imageRef.current.src = secondaryImg;
       }}
@@ -25,7 +25,7 @@ const ImageToggleOnMouseOver = ({primaryImg, secondaryImg}) => {
 }
 const ImageChangeOnMouseOver = () => {
   return (
-    <div  style={{transition:'0.3s'}}>
+    <div>
       <ImageToggleOnMouseOver
         primaryImg={navimage2}
         secondaryImg={navimage}
@@ -37,9 +37,9 @@ const ImageChangeOnMouseOver = () => {
 const Navbar =()=> {
   const imageRef = useRef(null);
   return (
-    <div className='navbar' style={{paddingTop:"0", backgroundColor:'#131313'}}>
+    <div className='navbar' style={{paddingTop:"0", backgroundColor:'#0E0E10'}}>
         <div className='nav-logo '>
-            <ImageChangeOnMouseOver className='nav-image' style={{transition:'0.3s'}}/>
+            <ImageChangeOnMouseOver className='nav-image' />
         </div>
         <div className='nav-content'>
             <ul>
